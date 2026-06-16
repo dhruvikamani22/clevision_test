@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clevision - Single Page Template</title>
+    <script src="https://tailwindcss.com"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <style> 
+        
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Prevents padding from breaking element widths */
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #eafac5;
+}
+
+
+img {
+  max-width: 100%; /* Ensures images never overflow their container */
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px; /* Limits width on extra large screens */
+  margin: 0 auto; /* Centers the content on the screen */
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows menu items to wrap on small mobile screens */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack into 1 column by default on mobile */
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.main-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.sidebar {
+  background: #e2e2e2;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .layout-grid {
+    grid-template-columns: 2fr 1fr; /* Automatically splits into 2 columns on larger screens */
+  }
+}
+
+    </style>
+    
+</head>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-indigo-600 tracking-tight">Clevision</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 font-medium">
+                    <a href="#" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Home</a>
+                    <a href="#" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">About</a>
+                    <a href="#" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Services</a>
+                    <a href="#" class="text-slate-600 hover:text-indigo-600 transition-colors duration-200">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-slate-600 hover:bg-slate-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger Icon -->
+                        <svg class="h-6 w-6" xmlns="images.png" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="hidden md:hidden border-b border-slate-200 bg-white" id="mobile-menu">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3 font-medium">
+                <a href="#" class="block px-3 py-2 rounded-md text-slate-600 hover:text-indigo-600 hover:bg-slate-50">Home</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-slate-600 hover:text-indigo-600 hover:bg-slate-50">About</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-slate-600 hover:text-indigo-600 hover:bg-slate-50">Services</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-slate-600 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-grow flex items-center">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6 text-center md:text-left order-2 md:order-1">
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Building the Future <br class="hidden sm:inline" />
+                        <span class="text-indigo-600">of the Web</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 max-w-xl mx-auto md:mx-0">
+                        We craft cutting-edge digital experiences that empower modern businesses to scale effectively. 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero in voluptates qui alias perferendis nemo, sit provident hic magnam beatae illum harum ullam molestias dolorum doloribus porro similique nulla consectetur?
+                    </p>
+                    <div class="pt-2">
+                        <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 shadow-md transition-all duration-200 transform hover:-translate-y-0.5">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                <!-- Image Container -->
+                <div class="order-1 md:order-2 flex justify-center">
+                    <img src="images.png" alt="Digital illustration representing web development solutions" class="rounded-xl shadow-lg w-full max-w-md md:max-w-full object-cover aspect-[4/3]" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start border-b border-slate-800 pb-8">
+                <!-- Branding -->
+                <div class="space-y-2">
+                    <span class="text-xl font-bold text-white tracking-tight">Clevision Technologies</span>
+                    <p class="text-sm">Innovating infrastructure, platforms, and intuitive interfaces for businesses globally.</p>
+                </div>
+                <!-- Contact Info -->
+                <div class="space-y-2">
+                    <span class="block text-sm font-semibold text-slate-200 tracking-wider uppercase">Contact Us</span>
+                    <ul class="space-y-1 text-sm">
+                        <li>Email: <a href="mailto:info@clevision.com" class="hover:text-white transition-colors">info@clevision.com</a></li>
+                        <li>Phone: <a href="tel:+15551234567" class="hover:text-white transition-colors">+1 (555) 123-4567</a></li>
+                    </ul>
+                </div>
+                <!-- Social Connections -->
+                <div class="space-y-2">
+                    <span class="block text-sm font-semibold text-slate-200 tracking-wider uppercase">Connect</span>
+                    <div class="flex space-x-4 text-sm font-medium">
+                        <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                        <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                        <a href="#" class="hover:text-white transition-colors">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs space-y-4 sm:space-y-0">
+                <p>&copy; 2026 Clevision Technologies. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

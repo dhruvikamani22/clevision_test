@@ -1,0 +1,17 @@
+1)distance=60km
+time=45 minutes
+speed=?
+s=d/t
+s=4/3
+s=1.33
+
+2)500 RUPEES is original price for item and after giving 10% discound
+
+3)2,6,12,20,30,?
+here differece between all numbers are 4,6,8,10 and so on
+so,next nu,ber in the series is 42.
+
+4)CODING=>DPEJOH
+FLOWER=>GMPXFS
+
+5)a's present age is 24 years
